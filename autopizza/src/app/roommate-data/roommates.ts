@@ -1,5 +1,12 @@
-import { Roommate } from './roommate';
+import { Injectable } from '@angular/core';
 
+export interface Roommate {
+    name: string;
+    profilePhotoUrl: string;
+    order: string[];
+}
+
+@Injectable()
 export class Roommates {
     static Arwen = {
         name: 'Arwen Wright',
@@ -26,7 +33,7 @@ export class Roommates {
     } as Roommate;
 
     static Jack = {
-        name: 'Jack',
+        name: 'Jack Stadnyk',
         profilePhotoUrl: './profile-photos/jack.jpeg',
         order: []
     } as Roommate;
@@ -42,4 +49,25 @@ export class Roommates {
         profilePhotoUrl: './profile-photos/jack.jpeg',
         order: []
     } as Roommate;
+
+    static Sietske = {
+        name: 'Sietske De Keijzer',
+        profilePhotoUrl: './profile-photos/jack.jpeg',
+        order: []
+    } as Roommate;
+
+    private roommateList = [
+        Roommates.Arwen,
+        Roommates.Deia,
+        Roommates.Ed,
+        Roommates.Gemma,
+        Roommates.Jack,
+        Roommates.Jackson,
+        Roommates.Mike,
+        Roommates.Sietske,
+    ];
+
+    get asList() {
+        return this.roommateList;
+    }
 }

@@ -7,7 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core'
+import { MatRippleModule } from '@angular/material/core';
+
+import { Roommates } from './roommate-data/roommates';
 
 import { NewOrderComponent } from './components/new-order/new-order.component';
 import { PastOrdersComponent } from './components/past-orders/past-orders.component';
@@ -32,7 +34,7 @@ import { RoommatesComponent } from './components/roommates/roommates.component';
     MatButtonModule,
     MatRippleModule,
   ],
-  providers: [],
+  providers: [Roommates],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

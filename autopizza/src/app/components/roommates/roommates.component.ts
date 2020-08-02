@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Roommates } from './../../roommate-data/roommateList';
+import { Roommates, Roommate } from '../../roommate-data/roommates';
 
 @Component({
   selector: 'app-roommates',
@@ -8,9 +8,12 @@ import { Roommates } from './../../roommate-data/roommateList';
 })
 export class RoommatesComponent implements OnInit {
 
-  constructor(roommates: Roommates) { }
+  roommateList: Roommate[];
 
-  ngOnInit(): void {
+  constructor(private roommates: Roommates) { }
+
+  ngOnInit() {
+    this.roommateList = this.roommates.asList;
   }
 
 }
