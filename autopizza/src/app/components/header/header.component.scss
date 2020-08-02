@@ -1,0 +1,14 @@
+.toolbar-container {
+    height: 100px;
+
+    .logo {
+        max-width: 80%;
+        max-height: 80%;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+}
