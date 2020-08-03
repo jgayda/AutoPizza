@@ -1,7 +1,22 @@
-<div class="profiles" *ngFor="let roommate of roommateList">
-    <div class="profile">
-        <img class="profile-photo" [src]="roommate.imageUrl"/>
-        <h3> {{ roommate.firstName + ' ' + roommate.lastName }} </h3>
+<div class="roommates-container">
+  <div
+    class="roommate"
+    [ngStyle]="{ margin: roommateWidth + '%' }"
+    *ngFor="let roommate of roommateList"
+  >
+    <div
+      class="profile-wrapper"
+      matRipple
+      [matRippleColor]="'rgba(255,255,255,0.5)'"
+      [matRippleCentered]="'true'"
+    >
+      <img
+        class="profile-photo"
+        [ngClass]="{ greyscale: !isIncludedInOrder(roommate) }"
+        [src]="roommate.imageUrl"
+        (click)="toggleIncludeInOrder(roommate)"
+      />
     </div>
+    <h3>{{ roommate.firstName + " " + roommate.lastName }}</h3>
+  </div>
 </div>
-

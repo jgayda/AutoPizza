@@ -1,15 +1,19 @@
-.profiles {
-    display: grid;
+.roommates-container {
+    display: flex;
+    padding: 50px;
 }
 
-.profile {
-    display: inline-block;
-    flex-grow: 1;
-    height:100px;    
-    width: calc(100% * (1/4) - 10px - 1px)
+.profile-wrapper {
+    border-radius: 50%;
 }
 
 .profile-photo {
-    width: 10%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.greyscale {
+    filter: grayscale(100%);
 }
