@@ -1,4 +1,7 @@
-<p>roommates works!</p>
-<span>
-    <h3 *ngFor="let roommate of roommateList"> {{ roommate.name }} </h3>
-</span>
+<div class="profiles" *ngFor="let roommate of roommateList">
+    <div class="profile">
+        <img class="profile-photo" [src]="roommate.imageUrl"/>
+        <h3> {{ roommate.firstName + ' ' + roommate.lastName }} </h3>
+    </div>
+</div>
+

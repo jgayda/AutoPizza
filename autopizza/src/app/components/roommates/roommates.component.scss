@@ -1,0 +1,15 @@
+.profiles {
+    display: grid;
+}
+
+.profile {
+    display: inline-block;
+    flex-grow: 1;
+    height:100px;    
+    width: calc(100% * (1/4) - 10px - 1px)
+}
+
+.profile-photo {
+    width: 10%;
+    border-radius: 50%;
+}

@@ -9,13 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 
-import { Roommates } from './roommate-data/roommates';
-
 import { NewOrderComponent } from './components/new-order/new-order.component';
 import { PastOrdersComponent } from './components/past-orders/past-orders.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RoommatesComponent } from './components/roommates/roommates.component';
+
+import { RoommatesService } from './services/roommates.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { RoommatesComponent } from './components/roommates/roommates.component';
     PastOrdersComponent,
     HomepageComponent,
     HeaderComponent,
-    RoommatesComponent
+    RoommatesComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import { RoommatesComponent } from './components/roommates/roommates.component';
     MatButtonModule,
     MatRippleModule,
   ],
-  providers: [Roommates],
+  providers: [RoommatesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
