@@ -18,6 +18,7 @@ import { RoommatesComponent } from './components/roommates/roommates.component';
 
 import { RoommatesService } from './services/roommates.service';
 import { MenuComponent } from './components/menu/menu.component';
+import { ReviewOrderComponent } from './components/review-order/review-order.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     RoommatesComponent,
     MenuComponent,
+    ReviewOrderComponent,
   ],
   imports: [
     BrowserModule,
