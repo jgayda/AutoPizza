@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RoommatesService, Roommate } from './../../services/roommates.service';
-import { of } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-roommates',
@@ -13,7 +13,10 @@ export class RoommatesComponent implements OnInit {
   roommateWidth: number;
   roommatePadding: 2;
 
-  constructor(private roommateService: RoommatesService) {}
+  constructor(
+    private roommateService: RoommatesService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {
     this.roommateList = this.roommateService.asList;
@@ -26,7 +29,7 @@ export class RoommatesComponent implements OnInit {
 
   generateCssDimensions() {
     const padding = this.roommatePadding * this.roommateList.length * 2;
-    this.roommateWidth = (100 / this.roommateList.length) - padding;
+    this.roommateWidth = 100 / this.roommateList.length - padding;
   }
 
   isIncludedInOrder(roommate: Roommate): boolean {
@@ -35,6 +38,11 @@ export class RoommatesComponent implements OnInit {
 
   toggleIncludeInOrder(roommate: Roommate): void {
     const isIncluded = this.roommateToOrderMap.get(roommate);
+    const snackbarDurationMs = 2000;
+    const message = isIncluded
+      ? `Removed ${roommate.firstName} from the order`
+      : `Added ${roommate.firstName} to the order`;
     this.roommateToOrderMap.set(roommate, !isIncluded);
+    this.snackBar.open(message, 'Dismiss', { duration: snackbarDurationMs });
   }
 }

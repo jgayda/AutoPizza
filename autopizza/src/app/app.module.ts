@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { NewOrderComponent } from './components/new-order/new-order.component';
 import { PastOrdersComponent } from './components/past-orders/past-orders.component';
@@ -16,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RoommatesComponent } from './components/roommates/roommates.component';
 
 import { RoommatesService } from './services/roommates.service';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { RoommatesService } from './services/roommates.service';
     HomepageComponent,
     HeaderComponent,
     RoommatesComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { RoommatesService } from './services/roommates.service';
     MatToolbarModule,
     MatButtonModule,
     MatRippleModule,
+    MatSnackBarModule,
   ],
   providers: [RoommatesService],
   bootstrap: [AppComponent]

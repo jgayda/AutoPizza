@@ -7,7 +7,7 @@
     <div
       class="profile-wrapper"
       matRipple
-      [matRippleColor]="'rgba(255,255,255,0.5)'"
+      [matRippleColor]="'rgba(255,255,255,0.35)'"
       [matRippleCentered]="'true'"
     >
       <img
@@ -17,6 +17,9 @@
         (click)="toggleIncludeInOrder(roommate)"
       />
     </div>
-    <h3>{{ roommate.firstName + " " + roommate.lastName }}</h3>
+    <h3 class="roommate-name">{{ roommate.firstName + " " + roommate.lastName }}</h3>
+    <div *ngIf="isIncludedInOrder(roommate)" class="order-menu">
+        <app-menu [roommate]="roommate"></app-menu>
+    </div>
   </div>
 </div>
