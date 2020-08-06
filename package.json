@@ -23,6 +23,7 @@
     "@angular/router": "~9.1.11",
     "pizzapi": "0.0.8",
     "rxjs": "~6.5.4",
+    "splitwise": "^1.0.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
