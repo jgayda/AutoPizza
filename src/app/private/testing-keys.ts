@@ -1,24 +1,13 @@
-import { url } from 'inspector';
-
-export class SplitwiseKeys {
-    private splitwiseConsumerKey = 'splitwise-consumer-key-test';
-    private splitwiseConsumerSecret = 'splitwise-consumer-secret-test';
-    private splitwiseTokenUrl = 'splitwise-token-url-test';
-    private splitwiseAuthorizeUrl = 'splitwise-authorize-url-test';
-
-    get consumerKey() {
-        return this.splitwiseConsumerKey;
-    }
-
-    get consumerSecret() {
-        return this.splitwiseConsumerSecret;
-    }
-
-    get tokenUrl() {
-        return this.splitwiseTokenUrl;
-    }
-
-    get authorizeUrl() {
-        return this.splitwiseAuthorizeUrl;
-    }
+interface SplitwiseKeys {
+    splitwiseConsumerKey: string;
+    splitwiseConsumerSecret: string;
+    splitwiseTokenUrl: string;
+    splitwiseAuthorizeUrl: string;
 }
+
+export const testKeys = {
+    splitwiseConsumerKey: 'splitwise-consumer-key-test',
+    splitwiseConsumerSecret: 'splitwise-consumer-secret-test',
+    splitwiseTokenUrl: 'splitwise-token-url-test',
+    splitwiseAuthorizeUrl: 'splitwise-authorize-url-test',
+} as SplitwiseKeys;
