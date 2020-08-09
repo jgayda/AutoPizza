@@ -22,12 +22,5 @@ export class SplitwiseService {
       this.consumerKey = testKeys.splitwiseConsumerKey;
       this.consumerSecret = testKeys.splitwiseConsumerSecret;
     }
-    this.splitwise = Splitwise({
-      consumerKey: this.consumerKey,
-      consumerSecret: this.consumerSecret,
-    });
-    const user = this.splitwise.getCurrentUser();
-    console.log(user);
   }
-
 }
